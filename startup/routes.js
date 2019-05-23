@@ -10,7 +10,6 @@ const withdraw = require('../routes/withdraw');
 module.exports = function (app) {
     // Assigning routes
     app.use('/', home);
-    app.use('/addNew', addNew);
     app.use('/api/customer', customer);
     app.use('/api/account', account);
     app.use('/api/deposit', deposit);
