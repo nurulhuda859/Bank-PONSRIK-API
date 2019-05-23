@@ -15,12 +15,11 @@ const { Customer } = require('../models/customer');
 
 // Home
 router.get('/', async (req, res) => {
-    res.render('user/home', {req});
+    res.send('API is working...');
 });
 // Customers
 router.get('/customers', admin, async (req, res) => {
     let customers = await Customer.find();
-    res.render('admin/customers', { customers });
 });
 // Accounts
 router.get('/accounts', admin, async (req, res) => {
